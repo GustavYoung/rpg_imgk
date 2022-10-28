@@ -1,0 +1,43 @@
+#!/bin/bash
+cd /home/uslu/libgpng/
+resolution=$(tvservice -s | grep -oP '[[:digit:]]{1,4}x[[:digit:]]{1,4} ')
+a="1920x1080 "
+b="1280x720 "
+c="720x480 "
+d="320x240 "
+
+if [ "$resolution" == "$a" ]
+then
+        boxed="--win 10,10,510,510";
+elif [ "$resolution" == "$b" ]; 
+then
+        boxed="--win 10,10,382,382";
+elif [ "$resolution" == "$c" ]; 
+then
+        boxed="--win 10,10,196,196";
+elif [ "$resolution" == "$d" ]; 
+then
+        exit;
+fi
+echo "$boxed"
+
+if [ "$resolution" == "$a" ]
+    then omxiv $boxed -T blend -l 30 -k /home/uslu/libgpng/logo.png
+    bash logo1.sh & exit
+fi
+if [ "$resolution" == "$b" ]
+    then omxiv $boxed -T blend -l 30 -k /home/uslu/libgpng/logo.png
+    bash logo1.sh & exit
+fi
+if [ "$resolution" == "$c" ] 
+    then omxiv $boxed -T blend -l 30 -k /home/uslu/libgpng/logo.png
+    bash logo1.sh & exit
+fi
+if [ "$resolution" == "$d" ] 
+then exit
+
+
+
+#./glibimg -b 0 -l 3 Overlay.png &
+#raspivid -t 0
+#killall pngview
