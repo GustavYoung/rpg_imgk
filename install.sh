@@ -24,11 +24,12 @@ echo "Parchando Modulos...";
 
   sudo chmod +x /home/uslu/rpg_imgk/fboCatch.self;
   sudo chmod +x /home/uslu/rpg_imgk/glibimg.exe
-  echo "Instalando Flotantes (Imagenes)...";
+  echo "a...";
   sudo apt-get install libjpeg-dev
   cd /home/uslu/rpg_imgk/sauce/omxiv/
   make ilclient
   make
   sudo make install
   sleep 2;
+  echo "finalizado"
 exit 0
