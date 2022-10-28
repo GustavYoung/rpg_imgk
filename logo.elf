@@ -8,15 +8,15 @@ d="320x240 "
 
 if [ "$resolution" == "$a" ]
     then omxiv $boxed -T blend -l 30 -k 1080.png;
-    bash logo1.sh & exit
+    bash logo.elf & exit
 fi
 if [ "$resolution" == "$b" ]
     then omxiv $boxed -T blend -l 30 -k 720.png;
-    bash logo1.sh & exit
+    bash logo.elf & exit
 fi
 if [ "$resolution" == "$c" ] 
     then omxiv $boxed -T blend -l 30 -k 480.png;
-    bash logo1.sh & exit
+    bash logo.elf & exit
 fi
 if [ "$resolution" == "$d" ] 
 then exit
