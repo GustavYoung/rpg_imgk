@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/uslu/libgpng/
+cd /home/uslu/rpg_imgk/
 resolution=$(tvservice -s | grep -oP '[[:digit:]]{1,4}x[[:digit:]]{1,4} ')
 a="1920x1080 "
 b="1280x720 "
