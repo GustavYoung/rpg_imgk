@@ -1,24 +1,30 @@
 #!/bin/bash
 cd /home/uslu/rpg_imgk/
-resolution=$(tvservice -s | grep -oP '[[:digit:]]{1,4}x[[:digit:]]{1,4} ')
+resolution=$(sudo fbset -s | grep -oP '[[:digit:]]{1,4}x[[:digit:]]{1,4} ')
 a="1920x1080 "
 b="1280x720 "
 c="720x480 "
 d="320x240 "
 
 if [ "$resolution" == "$a" ]
-    then omxiv $boxed -T blend -l 30 -k 1080.png;
-    bash logo.elf & exit
+    while true
+     do
+      then omxiv -T blend -l 30 -k 1080.png;
+    done
 fi
 if [ "$resolution" == "$b" ]
-    then omxiv $boxed -T blend -l 30 -k 720.png;
-    bash logo.elf & exit
+    while true
+     do
+      then omxiv -T blend -l 30 -k 720.png;
+    done
 fi
-if [ "$resolution" == "$c" ] 
-    then omxiv $boxed -T blend -l 30 -k 480.png;
-    bash logo.elf & exit
+if [ "$resolution" == "$c" ]
+    while true
+     do
+      then omxiv -T blend -l 30 -k 480.png;
+    done
 fi
-if [ "$resolution" == "$d" ] 
+if [ "$resolution" == "$d" ]
 then exit
 
 
