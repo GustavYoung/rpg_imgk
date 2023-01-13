@@ -1,10 +1,10 @@
 #!/bin/bash
 cd /home/uslu/rpg_imgk/
 resolution=$(sudo fbset -s | grep -oP '[[:digit:]]{1,4}x[[:digit:]]{1,4}')
-a="1920x1080 "
-b="1280x720 "
-c="720x480 "
-d="320x240 "
+a="1920x1080"
+b="1280x720"
+c="720x480"
+d="320x240"
 
 echo "$resolution"
 
