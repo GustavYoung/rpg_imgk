@@ -6,6 +6,8 @@ b="1280x720 "
 c="720x480 "
 d="320x240 "
 
+echo "$resolution"
+
 if [ "$resolution" == "$a" ]
     then
     while true
